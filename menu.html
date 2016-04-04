@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD><TITLE>exemplo de CSS</TITLE>
+<STYLE type="text/css">
+ul {list-style: none;
+	width: 800px;
+	float: left;	}
+ul li {position: relative;
+		float: left;
+		width: 200px;}
+ul li a {display: block;
+		background: #444;
+		color: #fff;
+		text-decoration: none;
+		padding: 5px;
+		transition: all 2s;	}
+ul li ul {display: none;
+		position: relative;
+		width: 200px;
+		float: left;
+		left: -40px;}
+ul li a:hover {background: #777;}
+ul li:hover ul {display: block;}
+</STYLE>
+</HEAD>
+<BODY>
+	<ul>
+		<li><a href="#">Efetua Matrículas</a></li>
+		<li><a href="#">Cadastros</a>
+			<ul>
+				<li><a href="#">Alunos</a></li>
+				<li><a href="#">Cursos</a></li>
+				<li><a href="#">Disciplinas</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Emite Carteira</a></li>
+		<li><a href="#">Fim</a></li>
+	</ul>
+</BODY>
+</HTML>
