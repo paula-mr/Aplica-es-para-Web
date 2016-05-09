@@ -1,0 +1,71 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="TrabalhoWeb.js"></script>
+</head>
+<body>
+	<form name="form1">
+		<h3>Criando Campos com Elemento INPUT</h3>
+		<b>Caixa de Texto: </b><input type="text" name="text"></input>
+		<br>
+		<b>Password: </b><input type="password" name="senha"></input>
+		<br>
+		<b>Botão de Rádio: </b>opc1<input type="radio" name="op" value="opc1"></input>
+			opc2<input type="radio" name="op" value="opc2"  checked="true"></input>
+			opc3<input type="radio" name="op" value="opc3"></input>
+		<br>
+		<b>Caixa de Seleção (checkbox): </b>
+			<br>
+			chk1<input type="checkbox" class="check" name="check" value="chk1"></input>
+			<br>
+			chk2<input type="checkbox" class="check" name="check" value="chk2" checked="true"></input>
+			<br>
+			chk3<input type="checkbox" class="check" name="check" value="chk3" checked="true"></input>
+			<br>
+			chk4<input type="checkbox" class="check" name="check" value="chk4"></input>
+		<br>
+		<b>Botão de confirmação: </b><button type="button" name="confirma" onclick="confirma();">Confirma</button>
+		<br>
+		<b>Botão Reset: </b><button type="button" name="limpa" onclick="limpa()">Limpa</button>
+	</form>
+	<form name="form2">
+		<h3>Criando Campos de Múltipla Escolha</h3>
+		<select name="select" size="3">
+			<option>Arroz</option>
+			<option>Feijão</option>
+			<option>Almôndegas</option>
+			<option>Macarrão</option>
+		</select>
+		<h3>Criando Campos de Área de Texto</h3>
+		<textarea name="textarea" rows="6" cols="30">Deixe seu comentário aqui!</textarea>
+		<h3>Quantidade:</h3>
+		<input type="number" name="quantidade" size=5></input>
+		<h3>Data:</h3>
+		Enter a date before 1980-01-01:<input type="date" name="antes" max="1980-01=01"></input>
+		<br>
+		Enter a date after 2000-01-01:<input type="date" name="depois" min="2000-01-02"></input>
+		<h3>Cor Favorita:</h3>
+		<input type="color" name="cor" value="#ff0000"></input>
+		<h3>Período:</h3>
+		<input type="range" name="range" min="0" max="10" value="5"></input>
+		<h3>Semana:</h3>
+		<input type="week" name="semana"></input>
+		<h3>Hora:</h3>
+		<input type="time" name="hora"></input>
+		<h3>Data Completa (data e hora):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lista suspensa com edição:</h3>
+		<input type="datetime-local" name="horaCompleta"></input>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input list="browsers" name="lista">
+			<datalist id="browsers">
+			  <option value="Internet Explorer">
+			  <option value="Firefox">
+			  <option value="Chrome">
+			  <option value="Opera">
+			  <option value="Safari">
+			</datalist>
+		</input>
+		<br><br>
+		<button type="button" name="gravar" onclick="gravar()">Gravar</button>
+	</form>
+</body>
+</html>
