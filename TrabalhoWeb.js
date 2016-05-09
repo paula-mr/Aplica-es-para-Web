@@ -47,7 +47,7 @@ function exibir() {
 		"\nQuantidade: " + quant +
 		"\nData com mínimo: " + antes +
 		"\nData com máximo: " + depois +
-		"\nCor Favorita: " + cor +
+		"\nCor Favorita: " + cor
 		);
 }
 function limpa() {}
