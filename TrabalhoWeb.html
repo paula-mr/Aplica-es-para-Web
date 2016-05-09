@@ -24,9 +24,9 @@
 			<br>
 			chk4<input type="checkbox" class="check" name="check" value="chk4"></input>
 		<br>
-		<b>Botão de confirmação: </b><button type="button" name="confirma" onclick="confirma();">Confirma</button>
+		<b>Botão de confirmação: </b><button type="button" onclick="confirma();">Confirma</button>
 		<br>
-		<b>Botão Reset: </b><button type="button" name="limpa" onclick="limpa()">Limpa</button>
+		<b>Botão Reset: </b><button type="button" onclick="limpa();">Limpa</button>
 	</form>
 	<form name="form2">
 		<h3>Criando Campos de Múltipla Escolha</h3>
@@ -55,7 +55,7 @@
 		<h3>Data Completa (data e hora):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lista suspensa com edição:</h3>
 		<input type="datetime-local" name="horaCompleta"></input>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<input list="browsers" name="lista">
+		<input list="browsers">
 			<datalist id="browsers">
 			  <option value="Internet Explorer">
 			  <option value="Firefox">
@@ -65,7 +65,7 @@
 			</datalist>
 		</input>
 		<br><br>
-		<button type="button" name="gravar" onclick="gravar()">Gravar</button>
+		<button type="button" onclick="gravar()">Gravar</button>
 	</form>
 </body>
 </html>

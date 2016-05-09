@@ -20,12 +20,13 @@ function confirma() {
 	senha = document.form1.senha.value;
 	op = document.form1.op.value;
 	//retornar valores da checkbox
+	//exibir();
 }
 function gravar() {
 	confirma();
 	select = document.form2.select.value;
 	textarea = document.form2.textarea.value;
-	quant = document.form2.quant.value;
+	quant = document.form2.quantidade.value;
 	antes = document.form2.antes.value;
 	depois = document.form2.depois.value;
 	cor = document.form2.cor.value;
@@ -33,12 +34,12 @@ function gravar() {
 	semana = document.form2.semana.value;
 	hora = document.form2.hora.value;
 	data = document.form2.horaCompleta.value;
-	lista = document.form2.lista.value;
+	//lista = document.form2.lista.value;
 	exibir();
 }
 function exibir() {
 	alert("funciona");
-	alert("Caixa de Texto: " + texto +
+	alert("Caixa de Texto: " + text +
 		"\nPassword: " + senha +
 		"\nBotão de Rádio: " + op +
 		"\nCheckbox: " + "FALTANDO" +
