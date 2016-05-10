@@ -2,11 +2,25 @@
 <head>
 	<meta charset="utf-8">
 	<script type="text/javascript" src="TrabalhoWeb.js"></script>
+	<title> Paula Ribeiro </title>
+	<style type="text/css">
+		img {
+			width: 500px;
+			height: 100px;
+		}
+		h2 {
+			color: red;
+			text-weight: bold; 
+		}
+	</style>
 </head>
 <body>
-	<form name="form1">
+	<img src="http://www.campus2.cefetmg.br/system/modules/br.cefetmg.sitioTipo1/resources/images/cabecalho_impressao.gif" id="cabecalho">
+	<h2> Aluna: Paula Mara Ribeiro </h4>
+	<h2> Turma: INF2A</h4>
+	<form name="form">
 		<h3>Criando Campos com Elemento INPUT</h3>
-		<b>Caixa de Texto: </b><input type="text" name="text"></input>
+		<b>Caixa de Texto: </b><input type="text" name="texto"></input>
 		<br>
 		<b>Password: </b><input type="password" name="senha"></input>
 		<br>
@@ -16,19 +30,17 @@
 		<br>
 		<b>Caixa de Seleção (checkbox): </b>
 			<br>
-			chk1<input type="checkbox" class="check" name="check" value="chk1"></input>
+			chk1<input type="checkbox" class="check" name="check" id="0" value="chk1"></input>
 			<br>
-			chk2<input type="checkbox" class="check" name="check" value="chk2" checked="true"></input>
+			chk2<input type="checkbox" class="check" name="check" id="1" value="chk2" checked="true"></input>
 			<br>
-			chk3<input type="checkbox" class="check" name="check" value="chk3" checked="true"></input>
+			chk3<input type="checkbox" class="check" name="check" id="2" value="chk3" checked="true"></input>
 			<br>
-			chk4<input type="checkbox" class="check" name="check" value="chk4"></input>
+			chk4<input type="checkbox" class="check" name="check" id="3" value="chk4"></input>
 		<br>
 		<b>Botão de confirmação: </b><button type="button" onclick="confirma();">Confirma</button>
 		<br>
-		<b>Botão Reset: </b><button type="button" onclick="limpa();">Limpa</button>
-	</form>
-	<form name="form2">
+		<b>Botão Reset: </b><button type="reset" name="limpa;">Limpa</button>
 		<h3>Criando Campos de Múltipla Escolha</h3>
 		<select name="select" size="3">
 			<option>Arroz</option>
@@ -55,7 +67,7 @@
 		<h3>Data Completa (data e hora):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lista suspensa com edição:</h3>
 		<input type="datetime-local" name="horaCompleta"></input>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<input list="browsers">
+		<input list="browsers" name="lista">
 			<datalist id="browsers">
 			  <option value="Internet Explorer">
 			  <option value="Firefox">
