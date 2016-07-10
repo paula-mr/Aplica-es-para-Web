@@ -1,31 +1,28 @@
+<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<script type="text/javascript">
-		if (window.XMLHtppRequest) {
-			xmlhttp = new XMLHtppRequest();
+<body>
+	<script>
+		if (window.XMLHttpRequest){
+			xmlhttp = new XMLHttpRequest();
 		}
 		else {
-			xmlhttp = new ActiveXObject("Microsoft.HMLHTTP");
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 		}
 		xmlhttp.open("GET", "books.xml", false);
 		xmlhttp.send();
 		xmlDoc = xmlhttp.responseXML;
-		newel = xmlhttp.crateElement("edition");
-		newtext = xmlhttp.createTextNode("First");
+		newel = xmlDoc.createElement("edition");
+		newtext = xmlDoc.createTextNode("First");
 		newel.appendChild(newtext);
 		x = xmlDoc.getElementsByTagName("book");
 		for (var l in x) {
 			x[l].appendChild(newel);
-			for (var i=0; i<x[l].childNodes.Length; i++) {
-				if (x[l].childNodes[i].nodeType == 1) {
+			for (i=0; i<x[l].childNodes.length; i++) {
+				if (x[l].childNodes[i].nodeType==1) {
 					document.write(x[l].childNodes[i].nodeName + ": " + x[l].childNodes[i].childNodes[0].nodeValue + "<br>");
 				}
-			}
+			}	
 		}
 	</script>
-</head>
-<body>
-
 </body>
 </html>
