@@ -1,0 +1,27 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.onLoad = function() {
+			var table = document.createElement("table");
+			table.style.backgroundColor = "beige";
+			table.style.color = "brown";
+			for (i=0; i<5; i++) {
+				var tr = document.createElement("tr");
+				for (j=0; j<4; j++) {
+					var td = document.createElement("td");
+					var text = document.createTextNode("L" + i + "C" + j);
+					td.appendChild(text);
+					tr.appendChild(td);
+				}
+				table.appendChild(tr);
+			}
+			var body = document.getElementsByTagName("body")[0];
+			body.appendChild(table);
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
