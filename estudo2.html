@@ -1,17 +1,20 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
+	<title>Exercício G</title>
 	<script type="text/javascript">
-		window.onLoad = function() {
+		window.onload = function() {
 			var table = document.createElement("table");
 			table.style.backgroundColor = "beige";
 			table.style.color = "brown";
 			for (i=0; i<5; i++) {
 				var tr = document.createElement("tr");
-				for (j=0; j<4; j++) {
+				for (j=0; j<3; j++) {
 					var td = document.createElement("td");
-					var text = document.createTextNode("L" + i + "C" + j);
+					var text = document.createTextNode("Linha " + i + " Coluna " + j );
 					td.appendChild(text);
+					td.style.border = "thick solid #fff";
 					tr.appendChild(td);
 				}
 				table.appendChild(tr);
