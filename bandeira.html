@@ -1,0 +1,86 @@
+<html>
+<head>
+	<meta charset = "utf-8">
+	<script type="text/javascript">
+		window.onload = function() {
+			var canvas = document.getElementById("myCanvas");
+			var ctx = canvas.getContext("2d");
+			var Quadrilatero = function(){
+				this.corFundo = "black";
+				this.origX1 = 0;
+				this.origY1 = 0;
+				this.ladoX = 0;
+				this.ladoY = 0;
+			}
+			Quadrilatero.prototype.desenha = function(ctx) {}
+			
+			//cria retangulo a partir de quadrilatero
+			var Retangulo = function() {
+				Quadrilatero.call(this);
+			}
+			Retangulo.prototype = Object.create(Quadrilatero.prototype);
+			Retangulo.prototype.desenha = function(ctx, cor, o1, o2, lx, ly){
+				this.corFundo = cor;
+				this.origX1 = o1;
+				this.origY1 = o2;
+				this.ladoX = lx;
+				this.ladoY = ly;
+				ctx.fillStyle = this.corFundo;
+				ctx.fillRect(this.origX1, this.origY1, this.ladoX, this.ladoY);
+			}
+			var ret = new Retangulo();
+			ret.desenha(ctx, "green", 0, 0, 450, 300);
+
+			//cria losango a partir de quadrilatero
+			var Losango = function() {
+				Quadrilatero.call(this);
+			}
+			Losango.prototype = Object.create(Quadrilatero.prototype);
+			Losango.prototype.desenha = function(ctx){
+				this.corFundo = "yellow";
+				ctx.beginPath();
+				ctx.moveTo(225, 0);
+				ctx.lineTo(450, 150);
+				ctx.lineTo(225, 300);
+				ctx.lineTo(0, 150);
+				ctx.fillStyle = this.corFundo;
+				ctx.fill();
+			}
+			var los = new Losango();
+			los.desenha(ctx);
+
+			//cria o circulo
+			var Circulo = function() {
+				this.corFundo = "black";
+				this.origX1 = 0;
+				this.origY1 = 0;
+				raio = 0;
+			}
+			Circulo.prototype.desenha = function(ctx) {
+				ctx.beginPath();
+				ctx.fillStyle="blue";
+				ctx.arc(225,150,100,0,2*Math.PI);
+				ctx.fill();
+				ctx.closePath();
+			}
+			var cir = new Circulo;
+			cir.desenha(ctx);
+
+			//cria mais um retangulo
+			var retBranco = new Retangulo();
+			retBranco.desenha(ctx, "white", 125, 135, 200, 30);
+
+			//escreve
+			ctx.beginPath();
+			ctx.font = "20px Arial";
+			ctx.fillStyle = "black";
+			ctx.fillText("Ordem e Progresso", 140, 155);
+			ctx.fill();
+			ctx.endPath();
+		}
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" width="450" height="300">
+</body>
+</html>
