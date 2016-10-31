@@ -3,4 +3,4 @@ O que temos que fazer para a apresentação:
 - [ ] Fazer convite
 - [ ] Montar powerpoint OU prezi
 - [ ] Receber script da apresentação
-- [ ] Ensaio da apresentação
+- [x ] Ensaio da apresentação
